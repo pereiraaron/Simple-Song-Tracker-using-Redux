@@ -1,16 +1,18 @@
 import React from "react";
 import "semantic-ui-css/semantic.min.css";
-import { useSelector, useDispatch } from "react-redux";
 import "./App.css";
+import SongDetail from "./components/SongDetail";
 import SongList from "./components/SongList";
 
 function App() {
-  const songs = useSelector((state) => state.songs);
   return (
-    <div className="ui container grid">
+    <div className="ui container grid ">
       <div className="ui row">
         <div className="column eight wide">
-          <SongList songs={songs} />
+          <SongList />
+        </div>
+        <div className="column eight wide">
+          <SongDetail />
         </div>
       </div>
     </div>
