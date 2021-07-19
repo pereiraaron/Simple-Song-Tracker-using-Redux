@@ -1,3 +1,5 @@
+import { combineReducers } from "redux";
+
 export const songListReducer = () => {
   return [
     { title: "I'LL NEVER BREAK YOUR HEART", duration: "03:40" },
@@ -22,3 +24,8 @@ export const selectedSongReducer = (selectedSong = null, action) => {
   }
   return selectedSong;
 };
+
+export default combineReducers({
+  songs: songListReducer,
+  selectedSong: selectedSongReducer,
+});
